@@ -1,0 +1,31 @@
+// ブレークポイント
+@mixin sp{
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+/*------------------------
+コンテンツ表示・非表示クラス
+--------------------------*/
+
+/* sp:非表示 tablet/pc：表示 */
+.hideShow {
+  display: none;
+  @include pc {
+    display: block;
+  };
+}
+
+/* sp:表示 tablet/pc：非表示 */
+.showHide {
+  display: block;
+  @include pc {
+    display: none;
+  };
+}
