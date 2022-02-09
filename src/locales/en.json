@@ -1,0 +1,24 @@
+{
+  "top": {
+    "description1": "@teamLab, Japan",
+    "description2": "my note of software engineering",
+    "description3": "#Rust #Go #Vim",
+    "about": "about",
+    "blog": "blog",
+    "changeLang": "> 日本語"
+  },
+  "about": {
+    "whoAmI": {
+      "title": "Profile",
+      "name": "Kazuki Yoshida",
+      "birth": "28 years old",
+      "where": "Toyo, Japan"
+    },
+    "historyTitle": "Educational background",
+    "history2": "2011.4 - 2015.3 : B.Sc. Physics, Kyoto University, Japan",
+    "history3": "2015.4 - 2017.3 : M.Sc. Physics, Kyoto University, Japan",
+    "jobTitle": "Work Experience",
+    "job1": "2017.4 - 2018.2 : IGPI Business Analytics & Intelligence, Inc.",
+    "job2": "2018.2 - present : teamLab"
+  }
+}

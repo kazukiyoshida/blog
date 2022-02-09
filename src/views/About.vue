@@ -1,20 +1,40 @@
 <template>
   <div class="component">
     <div class="topImages">
-      <img src="" alt="">
+      <img src="../assets/images/selfie.jpeg" alt="selfie" class="topImage">
     </div>
     <div class="showHide">
       <div class="wrapSns">
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <a href="" target="_blank" class="sns"></a>
+          <fa-icon :icon="['fab', 'twitter']" />
+        <a href="" target="_blank" class="sns"></a>
+        <a href="" target="_blank" class="sns"></a>
       </div>
     </div>
     <div class="wrapContents">
-      <div class="whoAmI"></div>
-      <div class="History"></div>
-      <div class="Job"></div>
-      <div class="Like"></div>
+      <div class="whoAmI">
+        <p class="sectionTitle"></p>
+        <p class="line sectionTitle">{{ $t('about.whoAmI.title') }}</p>
+        <p class="line">{{ $t('about.whoAmI.name') }}</p>
+        <p class="line">{{ $t('about.whoAmI.birth') }}</p>
+        <p class="line">{{ $t('about.whoAmI.where') }}</p>
+      </div>
+      <div class="Job">
+        <p class="sectionTitle">{{ $t('about.jobTitle') }}</p>
+        <p class="line">{{ $t('about.job2') }}</p>
+        <p class="line">{{ $t('about.job1') }}</p>
+      </div>
+      <div class="History">
+        <p class="sectionTitle">{{ $t('about.historyTitle') }}</p>
+        <p class="line">{{ $t('about.history3') }}</p>
+        <p class="line">{{ $t('about.history2') }}</p>
+        <p class="line">{{ $t('about.history1') }}</p>
+      </div>
+      <div class="Like">
+        <p class="sectionTitle">趣味</p>
+        <p class="line">{{ $t('about.like1') }}</p>
+        <p class="line">{{ $t('about.like2') }}</p>
+      </div>
       <div class="blank"></div>
     </div>
   </div>
