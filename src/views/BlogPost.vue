@@ -1,7 +1,7 @@
 <template>
   <div class="wrapPage">
     <div class="backButton">
-      <router-link to="/blog">＜ Back to Index</router-link>
+      <router-link :to="$C.route.blog">＜ Back to Index</router-link>
     </div>
     <div class="wrapSpHeader"></div>
     <div class="wrapBlog">
@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
+import { defineComponent, inject, computed } from 'vue';
 import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
 import moment from 'moment';
@@ -28,6 +28,7 @@ import BlogTag from '../components/BlogTag.vue'
 
 export default defineComponent({
   name: 'BlotPost',
+  inject: ['$C'],
   components: { BlogTag },
   setup() {
     const route = useRoute()

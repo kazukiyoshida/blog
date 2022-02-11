@@ -6,7 +6,7 @@
     <div class="wrapAllBlogs">
       <div v-for="post in postIndex" :key="post.id">
         <div class="wrapBlog">
-          <router-link :to="'/blog/' + post.id" class="blog">
+          <router-link :to="$C.route.blog + '/' + post.id" class="blog">
             <p class="title">{{ post.title }}</p>
             <p class="createdAt">posted at {{ convertDate(post.created_at) }}</p>
             <BlogTag :tags="post.tags" class="tags" />
@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
 import { useStore } from 'vuex'
 import moment from 'moment';
 import BlogTag from '../components/BlogTag.vue'
@@ -26,6 +26,7 @@ import BlogSpHeader from '../components/BlogSpHeader.vue'
 
 export default defineComponent({
   name: 'BlotTop',
+  inject: ['$C'],
   components: { BlogTag, BlogSpHeader },
   setup() {
     const store = useStore()

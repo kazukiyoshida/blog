@@ -2,23 +2,24 @@
   <div class="wrapSpHeader">
     <div class="wrapSns"></div>
     <div class="wrapTitle">
-      <router-link to="/">
+      <router-link :to="$C.route.home">
         <p class="headerTitle">kazuki</p>
         <p class="headerTitle">yoshida</p>
       </router-link>
     </div>
     <div class="wrapMenu">
-      <router-link to="/about" class="menu">about</router-link>
-      <router-link to="/blog" class="menu">blog</router-link>
+      <router-link :to="$C.route.about" class="menu">about</router-link>
+      <router-link :to="$C.route.blog" class="menu">blog</router-link>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
 
 export default defineComponent({
-  name: 'BlogSpHeader'
+  name: 'BlogSpHeader',
+  inject: ['$C'],
 });
 </script>
 
