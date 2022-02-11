@@ -2,17 +2,39 @@
   <div class="component">
     <div class="wrapSpHeader"></div>
     <div class="wrapAllBlogs">
-      <div class="wrapBlog"></div>
+      <div v-for="post in posts.reverse().filter((x) => !x.draft)" :key="post.id">
+        <div class="wrapBlog">
+          <router-link :to="'/blog/' + post.id" class="blog">
+            <p class="title">{{ post.title }}</p>
+            <p class="createdAt">posted at {{ convertDate(post.created_at) }}</p>
+            <div v-for="tag in post.tags.split(',')" :key="tag" class="tag">
+              <BlogTag :name="tag" />
+            </div>
+          </router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import moment from 'moment';
+import posts from '../contents/index.json'
+import BlogTag from '../components/BlogTag.vue'
 
 export default defineComponent({
   name: 'BlotTop',
-  components: {},
+  components: { BlogTag },
+  setup() {
+    const convertDate = (dt: string): string => {
+      return moment(Date.parse(dt)).format('YYYY/MM/DD')
+    }
+    return {
+      posts,
+      convertDate,
+    }
+  }
 });
 </script>
 
@@ -63,6 +85,7 @@ export default defineComponent({
 
 .tag {
   display: inline-block;
+  padding: 3px 3px 3px 0px;
 }
 
 a:visited, a {
