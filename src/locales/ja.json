@@ -1,8 +1,8 @@
 {
   "top": {
-    "description1": "@teamLab, 東京",
+    "description1": "@LINE mlinfra, 東京",
     "description2": "Webエンジニアの記録です.",
-    "description3": "#Rust #Go #Vim",
+    "description3": "#Rust #Go #Python #Vim",
     "about": "自己紹介",
     "blog": "ブログ",
     "changeLang": "> English"
@@ -11,7 +11,7 @@
     "whoAmI": {
       "title": "プロフィール",
       "name": "吉田 和輝 (よしだ かずき)",
-      "birth": "28歳",
+      "birth": "29歳",
       "where": "東京都在住"
     },
     "historyTitle": "学歴",
@@ -20,7 +20,8 @@
     "history3": "2017年 3月 : 京都大学大学院理学研究科　物理学・宇宙物理学専攻　卒業",
     "jobTitle": "職歴",
     "job1": "2017年 4月 ~ 2018年2月 : 株式会社IGPIビジネスアナリティクス&インテリジェンス（コンサルタント）",
-    "job2": "2018年 2月 ~ 現在 : チームラボ株式会社（ソフトウェア エンジニア）",
+    "job2": "2018年 2月 ~ 2021年6月 : チームラボ株式会社（software engineer）",
+    "job3": "2021年 6月 ~ 現在 : LINE 株式会社, ML Infra team（software engineer）",
     "like1": "・中学校〜大学生の頃はテニスを続け、大学院生の頃からはランニングが趣味です",
     "like2": "・お酒が好きで学生の頃はアイリッシュパブでアルバイトをしていました"
   }

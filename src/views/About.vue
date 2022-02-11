@@ -21,6 +21,7 @@
       </div>
       <div class="Job">
         <p class="sectionTitle">{{ $t('about.jobTitle') }}</p>
+        <p class="line">{{ $t('about.job3') }}</p>
         <p class="line">{{ $t('about.job2') }}</p>
         <p class="line">{{ $t('about.job1') }}</p>
       </div>
