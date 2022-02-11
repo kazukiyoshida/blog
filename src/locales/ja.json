@@ -1,8 +1,8 @@
 {
   "top": {
-    "description1": "@LINE mlinfra, 東京",
-    "description2": "Webエンジニアの記録です.",
-    "description3": "#Rust #Go #Python #Vim",
+    "desc1": "@LINE mlinfra, 東京",
+    "desc2": "Webエンジニアの記録です.",
+    "desc3": "#Rust #Go #Python #Vim",
     "about": "自己紹介",
     "blog": "ブログ",
     "changeLang": "> English"

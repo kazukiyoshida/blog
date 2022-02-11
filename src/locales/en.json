@@ -1,8 +1,8 @@
 {
   "top": {
-    "description1": "@teamLab, Japan",
-    "description2": "my note of software engineering",
-    "description3": "#Rust #Go #Vim",
+    "desc1": "@LINE, Japan",
+    "desc2": "my note of software engineering",
+    "desc3": "#Rust #Go #Vim",
     "about": "about",
     "blog": "blog",
     "changeLang": "> 日本語"

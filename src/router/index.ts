@@ -6,18 +6,17 @@ import BlogTop from '../views/BlogTop.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
-  },
-  {
-    path: '/blog',
-    name: 'Blog',
-    component: BlogTop
+    component: Home,
+    children: [
+      {
+        path: 'about',
+        component: About,
+      },
+      {
+        path: 'blog',
+        component: BlogTop,
+      }
+    ]
   }
 ]
 
