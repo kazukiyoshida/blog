@@ -1,13 +1,15 @@
 <template>
   <div class="component">
-    <div class="wrapSpHeader"></div>
+    <div class="wrapSpHeader">
+      <BlogSpHeader class="showHide" />
+    </div>
     <div class="wrapAllBlogs">
-      <div v-for="post in postIndex.reverse().filter((x) => !x.draft)" :key="post.id">
+      <div v-for="post in postIndex" :key="post.id">
         <div class="wrapBlog">
           <router-link :to="'/blog/' + post.id" class="blog">
             <p class="title">{{ post.title }}</p>
             <p class="createdAt">posted at {{ convertDate(post.created_at) }}</p>
-            <BlogTag :tags="post.tags" />
+            <BlogTag :tags="post.tags" class="tags" />
           </router-link>
         </div>
       </div>
@@ -20,10 +22,11 @@ import { defineComponent } from 'vue';
 import { useStore } from 'vuex'
 import moment from 'moment';
 import BlogTag from '../components/BlogTag.vue'
+import BlogSpHeader from '../components/BlogSpHeader.vue'
 
 export default defineComponent({
   name: 'BlotTop',
-  components: { BlogTag },
+  components: { BlogTag, BlogSpHeader },
   setup() {
     const store = useStore()
     const postIndex = store.getters.getPostIndex()
@@ -79,8 +82,13 @@ export default defineComponent({
 }
 
 .createdAt {
+  padding-top: 5px;
   font-size: 14px;
   color: gray;
+}
+
+.tags {
+  padding-top: 5px;
 }
 
 a:visited, a {

@@ -2,7 +2,7 @@
   <div class="app">
     <div class="wrapAll">
       <div class="wrapMiddle">
-        <div class="wrapSide">
+        <div class="wrapSide" :class="topPageFlg ? '' : 'hideShow'">
           <div class="side-title">
             <router-link to="/">
               <p>kazuki</p>
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-      <div class="wrapFooter">
+      <div class="wrapFooter" :class="topPageFlg ? '' : 'hideShow'">
         <div class="footer footer-white"> © 2022 KazukiYoshida </div>
       </div>
     </div>
@@ -44,23 +44,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, inject } from 'vue';
+import { defineComponent, computed, ref, inject } from 'vue';
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'Home',
   inject: ['$i18n', '$C'],
   setup() {
-    const count = ref(0)
+    const route = useRoute()
     const { t, locale } = useI18n({ useScope: 'global' })
-
     const changeLang = (lang: string) => {
       locale.value = lang
     }
-
+    const topPageFlg = computed(() => {
+      return route.path == '/'
+    })
     return {
-      count,
       changeLang,
+      topPageFlg,
       locale,
       t,
     }

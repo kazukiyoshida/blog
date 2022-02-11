@@ -10,6 +10,9 @@
       <div class="wrapTags">
         <BlogTag :tags="postHeader.tags" />
       </div>
+      <div>
+        <loading :active="loading" spinner="bar-fade-scale" />
+      </div>
       <div class="post" v-if="postContent" v-html="postContent.bodyHtml.join('\n')"></div>
       <div class="blank"></div>
     </div>
@@ -34,10 +37,14 @@ export default defineComponent({
     const postContent = computed(() => {
       return store.getters.getPostContent(route.params.blogId)
     })
+    const loading = computed(() => {
+      return store.getters.getLoading()
+    })
     const convertDate = (dt: string): string => {
       return moment(Date.parse(dt)).format('YYYY/MM/DD')
     }
     return {
+      loading,
       postHeader,
       postContent,
       convertDate,
@@ -78,7 +85,7 @@ a:visited, a {
 }
 
 .backButton {
-  padding: 20px;
+  padding: 20px 0px 0px 20px;
 }
 
 .title {
