@@ -1,8 +1,8 @@
 export default {
   route: {
-    home: '/blog',
-    about: '/blog/about',
-    blog: '/blog/posts',
+    home: '/',
+    about: '/about',
+    blog: '/posts',
   },
   link: {
     twitter_url: "https://twitter.com/_kazukiyoshida_",
