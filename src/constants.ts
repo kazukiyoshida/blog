@@ -1,4 +1,9 @@
 export default {
+  route: {
+    home: '/blog',
+    about: '/blog/about',
+    blog: '/blog/posts',
+  },
   link: {
     twitter_url: "https://twitter.com/_kazukiyoshida_",
     github_url: "https://github.com/kazukiyoshida",

@@ -6,7 +6,7 @@ import BlogPost from '../views/BlogPost.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/blog',
     component: Home,
     children: [
       {
@@ -14,11 +14,11 @@ const routes: Array<RouteRecordRaw> = [
         component: About,
       },
       {
-        path: 'blog',
+        path: 'posts',
         component: BlogTop,
       },
       {
-        path: 'blog/:blogId',
+        path: 'posts/:blogId',
         component: BlogPost,
       }
     ]

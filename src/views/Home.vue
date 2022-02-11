@@ -4,7 +4,7 @@
       <div class="wrapMiddle">
         <div class="wrapSide" :class="topPageFlg ? '' : 'hideShow'">
           <div class="side-title">
-            <router-link to="/">
+            <router-link :to="$C.route.home">
               <p>kazuki</p>
               <p>yoshida</p>
             </router-link>
@@ -22,8 +22,8 @@
             <p>{{ t('top.desc3') }}</p>
           </div>
           <div class="side-buttons">
-            <router-link to="/about" class="button">about</router-link>
-            <router-link to="/blog" class="button">blog</router-link>
+            <router-link :to="$C.route.about" class="button">about</router-link>
+            <router-link :to="$C.route.blog" class="button">blog</router-link>
           </div>
           <div class="side-lang">
             <div v-if="locale == 'en'" class=lang @click="changeLang('ja')">{{ t('top.changeLang') }}</div>
@@ -58,7 +58,7 @@ export default defineComponent({
       locale.value = lang
     }
     const topPageFlg = computed(() => {
-      return route.path == '/'
+      return route.path == '/blog'
     })
     return {
       changeLang,
