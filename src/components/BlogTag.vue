@@ -1,6 +1,8 @@
 <template>
   <div class="component">
-    <a href="#" class="tag">{{ name }}</a>
+    <div class="tagList" v-for="tag in tags.split(',')" :key="tag">
+      <a href="#" class="tag">{{ tag }}</a>
+    </div>
   </div>
 </template>
 
@@ -9,11 +11,17 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'BlogTag',
-  props: ['name'],
+  props: ['tags'],
 });
 </script>
 
 <style lang="scss" scoped>
+
+.tagList {
+  display: inline-block;
+  padding: 3px 3px 3px 0px;
+}
+
 .tag {
   font-size: 12px;
   font: bold;
