@@ -76,7 +76,7 @@ export default defineComponent({
 }
 
 .backButton {
-  padding: 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .topImages {
