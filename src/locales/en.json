@@ -1,8 +1,8 @@
 {
   "top": {
-    "description1": "@teamLab, Japan",
-    "description2": "my note of software engineering",
-    "description3": "#Rust #Go #Vim",
+    "desc1": "Tokyo, Japan",
+    "desc2": "My note of software engineering",
+    "desc3": "#Rust #Go #Python #Vue #Vim",
     "about": "about",
     "blog": "blog",
     "changeLang": "> 日本語"
@@ -19,6 +19,7 @@
     "history3": "2015.4 - 2017.3 : M.Sc. Physics, Kyoto University, Japan",
     "jobTitle": "Work Experience",
     "job1": "2017.4 - 2018.2 : IGPI Business Analytics & Intelligence, Inc.",
-    "job2": "2018.2 - present : teamLab"
+    "job2": "2018.2 - 2021.6 : teamLab (software engineer)",
+    "job3": "2021.6 - present : LINE Corporation, ML Infra team (software engineer)"
   }
 }

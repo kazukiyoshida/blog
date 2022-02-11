@@ -1,18 +1,43 @@
 <template>
   <div class="component">
-    <div class="wrapSpHeader"></div>
+    <div class="wrapSpHeader">
+      <BlogSpHeader class="showHide" />
+    </div>
     <div class="wrapAllBlogs">
-      <div class="wrapBlog"></div>
+      <div v-for="post in postIndex" :key="post.id">
+        <div class="wrapBlog">
+          <router-link :to="'/blog/' + post.id" class="blog">
+            <p class="title">{{ post.title }}</p>
+            <p class="createdAt">posted at {{ convertDate(post.created_at) }}</p>
+            <BlogTag :tags="post.tags" class="tags" />
+          </router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useStore } from 'vuex'
+import moment from 'moment';
+import BlogTag from '../components/BlogTag.vue'
+import BlogSpHeader from '../components/BlogSpHeader.vue'
 
 export default defineComponent({
   name: 'BlotTop',
-  components: {},
+  components: { BlogTag, BlogSpHeader },
+  setup() {
+    const store = useStore()
+    const postIndex = store.getters.getPostIndex()
+    const convertDate = (dt: string): string => {
+      return moment(Date.parse(dt)).format('YYYY/MM/DD')
+    }
+    return {
+      postIndex,
+      convertDate,
+    }
+  }
 });
 </script>
 
@@ -57,12 +82,13 @@ export default defineComponent({
 }
 
 .createdAt {
+  padding-top: 5px;
   font-size: 14px;
   color: gray;
 }
 
-.tag {
-  display: inline-block;
+.tags {
+  padding-top: 5px;
 }
 
 a:visited, a {

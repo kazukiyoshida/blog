@@ -1,0 +1,92 @@
+[
+{
+  "id": "ubuntu-gpu-tensorflow",
+  "title": "Ubuntu14.04 + GPU + TensorFlow 環境構築",
+  "created_at": "2016-06-19T00:00:00.000Z",
+  "updated_at": "2016-06-19T00:00:00.000Z",
+  "draft": false,
+  "tags": "TensorFlow,GPU",
+  "base": "2016-06-19.json"
+},
+{
+  "id": "tensorflow-data",
+  "title": "TensorFlowによるデータの読み込み",
+  "created_at": "2016-06-27T00:00:00.000Z",
+  "updated_at": "2016-06-27T00:00:00.000Z",
+  "draft": false,
+  "tags": "TensorFlow",
+  "base": "2016-06-27.json"
+},
+{
+  "id": "mercari-tech-conf",
+  "title": "Mercari Tech Conf 2018 レポート",
+  "created_at": "2018-10-09T00:00:00.000Z",
+  "updated_at": "2018-10-09T00:00:00.000Z",
+  "draft": false,
+  "tags": "Conference,Microservices",
+  "base": "2018-10-09.json"
+},
+{
+  "id": "closure",
+  "title": "クロージャを使った問題解決",
+  "created_at": "2019-07-31T00:00:00.000Z",
+  "updated_at": "2019-07-31T00:00:00.000Z",
+  "draft": false,
+  "tags": "TypeScript,Vue.js",
+  "base": "2019-07-31.json"
+},
+{
+  "id": "blog-release",
+  "title": "ブログが完成したので公開します",
+  "created_at": "2019-09-23T00:00:00.000Z",
+  "updated_at": "2019-09-23T00:00:00.000Z",
+  "draft": false,
+  "tags": "update",
+  "base": "2019-09-23.json"
+},
+{
+  "id": "nuxt-blog",
+  "title": "Nuxt + Express で Markdown ベースのブログを開発しました",
+  "created_at": "2019-10-13T00:00:00.000Z",
+  "updated_at": "2019-10-13T00:00:00.000Z",
+  "draft": false,
+  "tags": "Nuxt.js,Vue.js,Microservices,TypeScript",
+  "base": "2019-10-13.json"
+},
+{
+  "id": "Why-I-like-Rust",
+  "title": "なぜRustが好きなのか",
+  "created_at": "2021-01-08T00:00:00.000Z",
+  "updated_at": "2021-01-08T00:00:00.000Z",
+  "draft": false,
+  "tags": "Rust",
+  "base": "2021-01-08.json"
+},
+{
+  "id": "AVR-emulator",
+  "title": "AVR ATmega328p のエミュレータを Rust で実装する",
+  "created_at": "2021-01-18T00:00:00.000Z",
+  "updated_at": "2021-01-18T00:00:00.000Z",
+  "draft": false,
+  "tags": "Rust,AVR,CPU Emulator",
+  "base": "2021-01-18.json"
+},
+{
+  "id": "actor-model-DI",
+  "title": "Rust のアクターモデルで依存性逆転",
+  "created_at": "2021-01-26T00:00:00.000Z",
+  "updated_at": "2021-01-26T00:00:00.000Z",
+  "draft": false,
+  "tags": "Rust,Actix,Actor Model,Dependency Inversion",
+  "base": "2021-01-26.json"
+},
+{
+  "id": "monolith-to-microservices",
+  "title": "「モノリスからマイクロサービスへ」が勉強になった",
+  "created_at": "2021-01-28T00:00:00.000Z",
+  "updated_at": "2021-01-28T00:00:00.000Z",
+  "draft": true,
+  "tags": "Microservices,Record of Reading",
+  "base": "2021-01-28.json"
+}
+]
