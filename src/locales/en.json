@@ -1,8 +1,8 @@
 {
   "top": {
-    "desc1": "@LINE, Japan",
-    "desc2": "my note of software engineering",
-    "desc3": "#Rust #Go #Vim",
+    "desc1": "Tokyo, Japan",
+    "desc2": "My note of software engineering",
+    "desc3": "#Rust #Go #Python #Vue #Vim",
     "about": "about",
     "blog": "blog",
     "changeLang": "> 日本語"

@@ -10,20 +10,24 @@
             </router-link>
           </div>
           <div class="side-sns">
-            <a class="sns" :href="$C.twitter_url" target="_blank"><fa :icon="['fab', 'twitter']" /></a>
-            <a class="sns" :href="$C.github_url" target="_blank"><fa :icon="['fab', 'github']" /></a>
-            <a class="sns" :href="$C.instagram_url" target="_blank"><fa :icon="['fab', 'instagram']" /></a>
+            <a class="sns" :href="$C.link.twitter_url" target="_blank"><fa :icon="['fab', 'twitter']" /></a>
+            <a class="sns" :href="$C.link.github_url" target="_blank"><fa :icon="['fab', 'github']" /></a>
+            <a class="sns" :href="$C.link.instagram_url" target="_blank"><fa :icon="['fab', 'instagram']" /></a>
           </div>
           <div class="side-desc">
-            <a :href="$C.google_maps_url" target="_blank">
-              <p>{{ $t('top.desc1') }}</p>
+            <a :href="$C.link.google_maps_url" target="_blank">
+              <p>{{ t('top.desc1') }}</p>
             </a>
-            <p>{{ $t('top.desc2') }}</p>
-            <p>{{ $t('top.desc3') }}</p>
+            <p>{{ t('top.desc2') }}</p>
+            <p>{{ t('top.desc3') }}</p>
           </div>
           <div class="side-buttons">
+            <router-link to="/about" class="button">about</router-link>
+            <router-link to="/blog" class="button">blog</router-link>
           </div>
           <div class="side-lang">
+            <div v-if="locale == 'en'" class=lang @click="changeLang('ja')">{{ t('top.changeLang') }}</div>
+            <div v-else class=lang @click="changeLang('en')">{{ t('top.changeLang') }}</div>
           </div>
         </div>
         <div class="wrapContent">
@@ -41,14 +45,24 @@
 
 <script lang="ts">
 import { defineComponent, ref, inject } from 'vue';
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'Home',
-  inject: ['$C'],
+  inject: ['$i18n', '$C'],
   setup() {
     const count = ref(0)
+    const { t, locale } = useI18n({ useScope: 'global' })
+
+    const changeLang = (lang: string) => {
+      locale.value = lang
+    }
+
     return {
-      count
+      count,
+      changeLang,
+      locale,
+      t,
     }
   }
 });
@@ -99,7 +113,7 @@ body {
   @include pc {
     padding: 0 60px 0 60px;
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     width: 30%;
     padding: 0 60px 0 60px;
   }
@@ -109,13 +123,14 @@ body {
   color: white;
   font-weight: bold;
   display: inline-block;
+  padding-bottom: 15px;
 
   font-size: 70px;
   line-height: 70px;
 
   @include pc {
     font-size: 70px;
-    line-height: 70px;
+    line-height: 65px;
   }
 }
 
@@ -128,6 +143,7 @@ body {
   @include pc {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 10px;
     display: inline-block;
   };
 }
@@ -137,7 +153,8 @@ body {
   font-size: 40px;
 
   @include pc {
-    font-size: 40px;
+    font-size: 36px;
+    padding-bottom: 10px;
   }
 }
 

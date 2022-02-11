@@ -15,8 +15,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faTwitter, faGithub, faInstagram)
 
 const i18n = createI18n({
+  legacy: false,
   locale: 'ja',
-  fallbackLocale: 'en',
+  fallbackLocale: 'ja',
   messages: {
     en: localesEn,
     ja: localesJa

@@ -1,5 +1,8 @@
 <template>
   <div class="component">
+    <div class="backButton">
+      <router-link to="/">＜ Back</router-link>
+    </div>
     <div class="topImages">
       <img src="../assets/images/selfie.jpeg" alt="selfie" class="topImage">
     </div>
@@ -14,27 +17,27 @@
     <div class="wrapContents">
       <div class="whoAmI">
         <p class="sectionTitle"></p>
-        <p class="line sectionTitle">{{ $t('about.whoAmI.title') }}</p>
-        <p class="line">{{ $t('about.whoAmI.name') }}</p>
-        <p class="line">{{ $t('about.whoAmI.birth') }}</p>
-        <p class="line">{{ $t('about.whoAmI.where') }}</p>
+        <p class="line sectionTitle">{{ t('about.whoAmI.title') }}</p>
+        <p class="line">{{ t('about.whoAmI.name') }}</p>
+        <p class="line">{{ t('about.whoAmI.birth') }}</p>
+        <p class="line">{{ t('about.whoAmI.where') }}</p>
       </div>
       <div class="Job">
-        <p class="sectionTitle">{{ $t('about.jobTitle') }}</p>
-        <p class="line">{{ $t('about.job3') }}</p>
-        <p class="line">{{ $t('about.job2') }}</p>
-        <p class="line">{{ $t('about.job1') }}</p>
+        <p class="sectionTitle">{{ t('about.jobTitle') }}</p>
+        <p class="line">{{ t('about.job3') }}</p>
+        <p class="line">{{ t('about.job2') }}</p>
+        <p class="line">{{ t('about.job1') }}</p>
       </div>
       <div class="History">
-        <p class="sectionTitle">{{ $t('about.historyTitle') }}</p>
-        <p class="line">{{ $t('about.history3') }}</p>
-        <p class="line">{{ $t('about.history2') }}</p>
-        <p class="line">{{ $t('about.history1') }}</p>
+        <p class="sectionTitle">{{ t('about.historyTitle') }}</p>
+        <p class="line">{{ t('about.history3') }}</p>
+        <p class="line">{{ t('about.history2') }}</p>
+        <p class="line">{{ t('about.history1') }}</p>
       </div>
       <div class="Like">
         <p class="sectionTitle">趣味</p>
-        <p class="line">{{ $t('about.like1') }}</p>
-        <p class="line">{{ $t('about.like2') }}</p>
+        <p class="line">{{ t('about.like1') }}</p>
+        <p class="line">{{ t('about.like2') }}</p>
       </div>
       <div class="blank"></div>
     </div>
@@ -43,10 +46,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'About',
-  components: {},
+  setup() {
+    const { t } = useI18n()
+    return {
+      t,
+    }
+  }
 });
 </script>
 
@@ -64,6 +73,10 @@ export default defineComponent({
   margin: 0;
   box-shadow: 0px 4px 8px rgba(0,0,0,5);
   overflow:auto;
+}
+
+.backButton {
+  padding: 20px;
 }
 
 .topImages {
