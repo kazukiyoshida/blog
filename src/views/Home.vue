@@ -58,7 +58,7 @@ export default defineComponent({
       locale.value = lang
     }
     const topPageFlg = computed(() => {
-      return route.path == '/blog'
+      return route.path == '/'
     })
     return {
       changeLang,
