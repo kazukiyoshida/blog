@@ -5,12 +5,12 @@ import postIndex from '../../contents/json/index.json'
 export default createStore({
   state: {
     posts: {} as Record<string, any>,
-    postIndex,
+    postIndex: postIndex.reverse().filter((x: any) => !x.draft),
     loading: false,
   },
   getters: {
     getPostIndex: (state: any): any => () => {
-      return state.postIndex.reverse().filter((x: any) => !x.draft)
+      return state.postIndex
     },
     getPostHeader: (state: any): any => (blogId: string): any => {
       const xs = state.postIndex.filter((x: any) => x.id == blogId)
